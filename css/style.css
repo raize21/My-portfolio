@@ -709,28 +709,23 @@ h2 {
     #page-1 .col-2 {
         padding: 60px 50px;
     }
-    .profile {
-        padding: 70px 0 7% 0px;
-        gap: 0px;
-    }
     .profile-image img {
-        width: 189px !important;
-    }
-        .btn {
-        font-size: 15px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .role {
-        font-size: 24px;
-    }
-    .name, .information-2 .name {
-        font-size: 30px;
+        width: 277px !important;
     }
 }
 
 @media only screen and (max-width: 767px) {
+    .profile {
+        text-align: center;
+        flex-direction: column;
+        padding: 50px 50px 6% 50px !important;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .profile-image img {
+        width: 350px !important;
+    }
     .information-2 .img img {
         height: 334px;
     }
@@ -745,8 +740,8 @@ h2 {
 }
 
 @media only screen and (max-width: 666px) {
-    .profile-image img {
-        width: 220px !important;
+    .profile {
+        padding: 70px 0 7% 50px;
     }
     .icon {
         width: 100px;
@@ -786,25 +781,6 @@ h2 {
     #page-4 .col-2 {
         gap: 20px;
     }
-    .profile-image img {
-        width: 189px !important;
-    }
-    .profile {
-        padding: 70px 0 7% 0px;
-        gap: 0px;
-    }
-    .btn {
-        font-size: 15px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .role {
-        font-size: 24px;
-    }
-    .name, .information-2 .name {
-        font-size: 30px;
-    }
 }
 
 @media only screen and (max-width: 479px) {	
@@ -818,7 +794,7 @@ h2 {
 
 @media only screen and (max-width: 413px) {
     .profile {
-        padding: 50px 0 6% 0 !important;
+        padding: 50px 40px 6% 40px !important;
     }
     #page-1 .col-2 {
         margin-left: 13px;

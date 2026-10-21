@@ -766,9 +766,6 @@ h2 {
      #page-1 .img {
         width: calc(50% - 1 * -28px);
      }
-     .profile {
-        display: none;
-     }
 }
 
 

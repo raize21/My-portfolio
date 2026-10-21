@@ -817,96 +817,15 @@ h2 {
 }
 
 @media only screen and (max-width: 413px) {
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    max-width: 100%;
-    padding: 40px 20px 50px !important;
-    box-sizing: border-box;
-    overflow: hidden;
+    .profile {
+        padding: 50px 0 6% 0 !important;
     }
-
-.profile .profile-content {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-.profile .subtitle {
-    font-size: 15px;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-.profile .name {
-    font-size: 32px;
-    line-height: 1.2;
-    overflow-wrap: break-word;
-    margin-bottom: 8px;
-}
-
-.profile .role {
-    font-size: 23px;
-    line-height: 1.3;
-    margin-top: 0;
-}
-
-.profile .description {
-    font-size: 15px;
-    line-height: 1.7;
-    max-width: 100%;
-    margin-bottom: 25px;
-}
-
-.profile .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    width: 100%;
-}
-
-.profile .buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 135px;
-    min-height: 46px;
-    padding: 12px 24px;
-    box-sizing: border-box;
-}
-
-.profile .profile-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.profile .profile-image img.hero {
-    display: block;
-    width: 100% !important;
-    max-width: 250px;
-    height: auto;
-    object-fit: contain;
-}
-
-#page-1 .col-2 {
-    margin-left: 0;
-}
-
-#page-4 img {
-    width: 170px !important;
-    max-width: 100%;
-    height: auto;
-}
-
+    #page-1 .col-2 {
+        margin-left: 13px;
+    }
+    #page-4 img {
+        width: 170px !important;
+    }
 }
 
 @media only screen and (max-width: 374px) {

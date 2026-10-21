@@ -1,623 +1,185 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Salazar — Web Developer</title>
+<meta name="description" content="John Albert Salazar, freelance web developer and game builder from Iloilo City. Websites, systems and capstone projects.">
+<meta name="theme-color" content="#0b1120">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>  
-     <video autoplay loop muted playsinline class="body-bg-video">
-        <source src="asset/image/bg-vid.mp4" type="video/mp4">
+<body>
+<video autoplay loop muted playsinline class="body-bg-video" aria-hidden="true">
+  <source src="asset/image/bg-vid.mp4" type="video/mp4">
+</video>
+
+<header class="nav">
+  <a href="#top" class="logo">J.A. Salazar</a>
+  <nav aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#stack">Stack</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact" class="nav-cta">Hire me</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="subtitle">Hello, I’m</p>
+      <h1 class="name">John Salazar</h1>
+      <h2 class="role">I build <span id="typed" aria-live="off">websites</span><span class="caret" aria-hidden="true"></span></h2>
+      <p class="description">An aspiring web developer who enjoys creating modern, creative and responsive websites, and the occasional game.</p>
+      <div class="buttons">
+        <a href="#projects" class="btn primary">See my work</a>
+        <a href="#contact" class="btn secondary">Contact me</a>
+        <a href="https://drive.google.com/drive/folders/1phcYzAE5Kx01uce0UlyJyr3oMbwacVpn?usp=sharing" class="btn secondary" target="_blank" rel="noopener noreferrer">View resume</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Freelancing since</dt><dd>2021</dd></div>
+        <div><dt>Projects shipped</dt><dd id="count">17</dd></div>
+        <div><dt>Graduating</dt><dd>BSIT 2026</dd></div>
+      </dl>
+    </div>
+    <div class="hero-img"><img src="asset/image/hero.png" alt="John Salazar" width="600" height="600" fetchpriority="high"></div>
+  </section>
+
+  <section id="about" class="about wrap">
+    <video autoplay loop muted playsinline class="section-bg-video" aria-hidden="true">
+      <source src="asset/image/hacker-2.mp4" type="video/mp4">
     </video>
-    <main>
-        <section class="profile wrap">
-            <div class="profile-content">
-                <p class="subtitle">HELLO, I'M</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="title">About me</h2>
+        <p>I’m John Albert Salazar, a self-employed freelance programmer from Iloilo City since 2021. I help students with their capstone projects and theses through custom commissions.</p>
+        <p>I’m completing my BSIT at West Visayas State University, Janiuay Campus (Class of 2026). My capstone, <strong>Kingdom of Words</strong>, is a 2D RPG that makes learning French engaging for Filipino students.</p>
+        <p>When I’m not coding, I’m exploring new frameworks, designing game mechanics, or helping fellow students level up their projects.</p>
+      </div>
+      <figure class="portrait"><img src="asset/image/hero-2.png" alt="John Salazar portrait" loading="lazy"></figure>
+    </div>
+  </section>
 
-                <h1 class="name">John Salazar</h1>
-                <h3 class="role">Web Developer</h3>
+  <section id="stack" class="wrap center">
+    <h2 class="title">Tech stack</h2>
+    <div class="stack">
+      <img class="icon" src="asset/image/html-5.png" alt="HTML5" loading="lazy">
+      <img class="icon light" src="asset/image/wordpress-icon.png" alt="WordPress" loading="lazy">
+      <img class="icon" src="asset/image/css.png" alt="CSS3" loading="lazy">
+    </div>
+  </section>
 
-                <p class="description">
-                    I'm a passionate aspiring web developer who enjoys
-                    creating modern, creative, and responsive websites.
-                </p>
+  <section id="projects" class="wrap">
+    <h2 class="title center">Projects</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip active" data-f="all">All</button>
+      <button class="chip" data-f="personal">Personal</button>
+      <button class="chip" data-f="client">Client portfolios</button>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
 
-                <div class="buttons">
-                    <a href="#about" class="btn primary">About Me</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
-                    <a href="https://drive.google.com/drive/folders/1phcYzAE5Kx01uce0UlyJyr3oMbwacVpn?usp=sharing" class="btn secondary" target="_blank" rel="noopener noreferrer">View Resume</a>
-                </div>
-            </div>
+  <section id="certificates" class="wrap center">
+    <h2 class="title">Certificates</h2>
+    <div class="certs">
+      <img src="asset/image/cert1.jfif" alt="Certificate 1" loading="lazy">
+      <img src="asset/image/cert2.jfif" alt="Certificate 2" loading="lazy">
+    </div>
+  </section>
 
-            <div class="profile-image">
-                <img src="asset/image/hero.png" alt="John Salazar" class="hero" style="width: 600px;">
-            </div>
-        </section>
-        <section id="page-1" class="information-2 wrap" > 
-            
-            <div class="col-2">
-                        <video autoplay loop muted playsinline class="section-bg-video">
-            <source src="asset/image/hacker-2.mp4" type="video/mp4">
-        </video>
-            <div class="box">
-                <h2 class="name">About me</h2>
-                <p>I'm John Albert Salazar, a self-employed freelance programmer from Iloilo City since 2021.
-                I specialize in helping students with their capstone projects and thesis through custom commissions.</p>
-                <p>Currently completing my BSIT at West Visayas State University — Janiuay Campus (Class of 2026). My capstone thesis is "Kingdom of Words" 
-                — a 2D RPG game designed to make learning French engaging for Filipino students.</p>
-                <p>When I'm not coding, I'm exploring new frameworks, designing game mechanics, 
-                or helping fellow students level up their academic projects.</p>
-            </div>
-            <div class="img">
-                <img style="width: 350px;" src="asset/image/hero-2.png" alt="hero 2">
-            </div>
-        </div>
-        </section>
+  <section id="contact" class="wrap center">
+    <div class="contact">
+      <h2 class="title">Get in touch</h2>
+      <p>Whether you’re a student needing help with your thesis or a business needing a custom system, let’s build something that matters.</p>
+      <div class="links">
+        <a href="mailto:johnalbertsalazar241@gmail.com">Email me</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  const P = [
+ {t:"Kingdom of Words",c:"personal",img:"https://i.ibb.co/QF8FhRxV/kow.jpg",d:"A 2D RPG for learning French. Explore dungeons, battle enemies with vocabulary and unlock the story. Built as my WVSU capstone.",gh:"Kingdom-of-Words-A-2D-RPG-Game-For-Learning-French-Language"},
+ {t:"Bakeshop Sales & Inventory",c:"personal",img:"https://i.ibb.co/7xXkMqH6/bake.png",d:"POS and inventory system for small bakeshops with real-time stock, sales reports and role-based access.",live:"https://baketally.infinityfreeapp.com/"},
+ {t:"WanderLust Travel",c:"personal",d:"Responsive travel booking site with animated sections, a destination gallery and a multi-step reservation flow.",gh:"Travel-Website-WanderLust",live:"https://wander-lust-one-chi.vercel.app/"},
+ {t:"Animax Gallery",c:"personal",d:"Anime wallpaper gallery with an organized layout and easy browsing for fans.",gh:"Anime-Website",live:"https://animax-gallery.vercel.app/",prev:"https://animax-gallery.vercel.app/Jujutsu3d/index.html"},
+ {t:"Comfort Room Utilization Report System",c:"personal",d:"Web system for monitoring comfort room usage, with separate checker and admin access and centralized reports.",gh:"Comfort-Room-Utilization-Report-System",live:"https://comfort-room-utilization-report-sys.vercel.app/"},
+ {t:"J.A BarberShop",c:"personal",d:"Business website with services, prices, reviews and online appointment booking.",gh:"BarberShop",live:"https://barber-shop-one-nu.vercel.app/"},
+ {t:"Zee Rodriguez",c:"client",d:"Portfolio for business operations, social media, web management and AI automation support.",gh:"Zee.Rodrigue-Portfolio",live:"https://zee-rodriguez-portfolio.vercel.app/"},
+ {t:"Josielyn Rosalejos",c:"client",d:"Portfolio for customer service, lead generation, telesales and virtual assistance.",gh:"JOSIELYN-ROSALEJOS-PORTOFLIO",live:"https://josielyn-rosalejos.vercel.app/"},
+ {t:"Archie Sarmiento",c:"client",d:"Developer portfolio covering HTML, CSS, JavaScript, PHP, MySQL and Node.js.",gh:"Archie-Sarmiento",live:"https://archie-sarmiento-portfolio.vercel.app/"},
+ {t:"Diether Ang",c:"client",d:"Portfolio for customer service, e-commerce support, healthcare assistance and escalation management.",gh:"Diether-Ang-portfolio",live:"https://diether-ang-portfolio.vercel.app/"},
+ {t:"Ghein",c:"client",d:"Personal portfolio presenting skills, creative work and completed projects.",gh:"Christel-Ghein-Reginio-Portfolio",live:"https://ghein-portfolio.vercel.app/"},
+ {t:"Kervel Sobrevilla",c:"client",d:"Portfolio for social media management, digital marketing, graphic design and video editing.",gh:"portfolio-kervel",live:"https://kervel-sobrevilla-portfolio.vercel.app/"},
+ {t:"Abigail Malinit",c:"client",d:"Portfolio for virtual assistance, administrative support and workflow automation.",gh:"abigail-malinit-portfolio",live:"https://abigail-malinit-portfolio.vercel.app/"},
+ {t:"Jairus Cruz",c:"client",d:"Personal site showcasing technical skills, creative projects and professional development.",gh:"Jairus-Cruz-Portfolio",live:"https://jairus-cruz-portfolio.vercel.app/"},
+ {t:"Mark Jenzer",c:"client",d:"Portfolio for virtual assistance, executive support, graphic design and music education.",gh:"Mark-Jenzer-Portfolio",live:"https://mark-jenzer-portfolio.vercel.app/"},
+ {t:"Maria Kathryn Armenta",c:"client",d:"Portfolio for digital marketing, social media, lead generation and property management.",gh:"Maria-Kathryn-portfolio",live:"https://maria-kathryn-armenta-portfolio.vercel.app/"}
+];
+const esc = s => s.replace(/&/g,"&amp;");
+const grid = document.getElementById("grid");
+grid.innerHTML = P.map(p => {
+  const src = p.prev || p.live;
+  const shot = p.img ? `<img src="${p.img}" alt="${esc(p.t)} screenshot" loading="lazy">`
+    : `<iframe data-src="${src}" title="${esc(p.t)} preview" tabindex="-1" loading="lazy"></iframe>`;
+  const links = (p.gh ? `<a class="pb gh" href="https://github.com/raize21/${p.gh}" target="_blank" rel="noopener noreferrer">GitHub</a>` : "")
+    + (p.live ? `<a class="pb live" href="${p.live}" target="_blank" rel="noopener noreferrer">Live demo</a>` : "");
+  return `<article class="card" data-c="${p.c}"><div class="shot">${shot}</div><div class="body"><h3>${esc(p.t)}</h3><p>${p.d}</p><div class="pbs">${links}</div></div></article>`;
+}).join("");
+document.getElementById("count").textContent = P.length;
 
-        <section id="page-2" class="information-3 wrap">
-            <div>
-                <h2 class="name">TECHSTACK</h2>
-            </div>
-                  <div class="text-row-3">
-                        <img class="icon" src="asset/image/html-5.png" alt="html">
-                        <img class="icon" style="background-color: #fff;" src="asset/image/wordpress-icon.png" alt="wordpress">
-                        <img class="icon" src="asset/image/css.png" alt="css">
-                    </div>
-        </section>
-        <section id="page-3" class="information-4 wrap">
-            <div>
-                <h2 class="name">My Personal Projects</h2>
-            </div>
-                    <div class="col-info cols-1">
-                        <div class="p-box g-border">
-                         <h3>Kingdom of Words</h3>
-                             <p>A 2D RPG adventure game for learning the French language — combining narrative gameplay with vocabulary challenges. 
-                            Built as capstone thesis for WVSU. Players explore dungeons, battle enemies using French vocab, and unlock story progression.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Kingdom-of-Words-A-2D-RPG-Game-For-Learning-French-Language"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-                            </div>
-                        </div>
-                        <div class="img-trans">
-                        <img class="for-hover" src="https://i.ibb.co/QF8FhRxV/kow.jpg" alt="Kingdom of Words" style="width: 600px; height: 100%;" >   
-                        </div>      
-                    </div>
-                    <div class="col-info cols-2">  
-                         <div class="img-trans">
-                           <img class="for-hover" src="asset/image/bake.png" alt="Baketally" style="width: 600px; height: 100%;" >   
-                        </div>
+// scale iframes to fit their frame; load them only when near the viewport
+const fit = el => { const f = el.querySelector("iframe"); if (f) f.style.transform = `scale(${el.clientWidth / 1280})`; };
+const ro = new ResizeObserver(es => es.forEach(e => fit(e.target)));
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const f = e.target.querySelector("iframe");
+  if (f && !f.src) f.src = f.dataset.src;
+  io.unobserve(e.target);
+}), {rootMargin: "300px"});
+document.querySelectorAll(".shot").forEach(s => { ro.observe(s); io.observe(s); });
 
-                        <div class="p-box g-border">
-                            <h3>Bakeshop Sales &amp; Inventory</h3>
-                            <p>
-                                Complete POS and inventory management system for small
-                                bakeshops. Real-time stock tracking, sales reports, user
-                                management with role-based access control.
-                            </p>
-                            <div class="project-buttons">
-                                <a href="https://baketally.infinityfreeapp.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+// filters
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.classList.toggle("active", x === b));
+  document.querySelectorAll(".card").forEach(c => c.hidden = b.dataset.f !== "all" && c.dataset.c !== b.dataset.f);
+}));
 
-                    <div class="col-info cols-3">  
-                        <div class="p-box g-border">
-                         <h3>WanderLust Travel</h3>
-                             <p>Modern, fully responsive travel booking website with animated sections, destination gallery, interactive booking flow and multi-step reservation system.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Travel-Website-WanderLust"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
+// role typer (static text if reduced motion)
+const words = ["websites", "business systems", "capstone projects", "2D games"];
+const el = document.getElementById("typed");
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let w = 0, i = 0, del = false;
+  (function tick() {
+    const full = words[w];
+    el.textContent = full.slice(0, i);
+    i += del ? -1 : 1;
+    let wait = del ? 40 : 90;
+    if (!del && i > full.length) { del = true; wait = 1400; }
+    else if (del && i < 0) { del = false; i = 0; w = (w + 1) % words.length; wait = 300; }
+    setTimeout(tick, wait);
+  })();
+}
 
-                                <a href="https://wander-lust-one-chi.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://wander-lust-one-chi.vercel.app/"
-                            title="wander-lust-one-chi"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                    <div class="col-info cols-4">
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://animax-gallery.vercel.app/Jujutsu3d/index.html"
-                            title="Animax"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>          
-                        <div class="p-box g-border">
-                         <h3>Animax Gallery</h3>
-                             <p>Animax Gallery is a web-based anime wallpaper gallery designed for anime fans to explore and browse a collection of visually appealing wallpapers. 
-                                The website provides an organized and user-friendly interface that allows users to view anime images and enjoy different artwork styles. It focuses on creating an engaging browsing experience with an attractive layout and easy navigation, making it a convenient place for users to discover wallpapers for their devices.</p>
-                             <div class="project-buttons">
-                                <a href="https://github.com/raize21/Anime-Website"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-                                <a href="https://animax-gallery.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                       <div class="col-info cols-5">
-                        <div class="p-box g-border">
-                         <h3>Comfort Room Utilization Report System </h3>
-                             <p>Comfort Room Utilization Report System is a web-based management system designed to monitor and report comfort room usage. It provides separate access for checkers and administrators, helping organize utilization records and review submitted reports. 
-                                The system aims to simplify comfort room monitoring, improve record management, and support more efficient facility management through a centralized reporting interface.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Comfort-Room-Utilization-Report-System"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
+// nav shadow + active link
+const nav = document.querySelector(".nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 20), {passive: true});
+const links = [...document.querySelectorAll(".nav nav a")];
+const so = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+}), {rootMargin: "-45% 0px -50% 0px"});
+document.querySelectorAll("main section[id]").forEach(s => so.observe(s));
 
-                                <a href="https://comfort-room-utilization-report-sys.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://comfort-room-utilization-report-sys.vercel.app/"
-                            title="comfort-room-utilization-report-sys"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>          
-                    </div>
-                        <div>
-                    <div class="col-info cols-6">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://barber-shop-one-nu.vercel.app/"
-                            title="barber-shop-one-nu"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>J.A BarberShop Website</h3>
-                             <p>  J.A BarberShop Website is a modern business website designed
-                                to showcase grooming services and provide convenient online
-                                appointment booking. It features classic haircuts, skin fades,
-                                beard trimming, hot towel shaves, and kids' haircuts, along
-                                with service prices, customer reviews, and business information.
-                                Its stylish, responsive layout helps customers explore services
-                                and schedule appointments with ease.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/BarberShop"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://barber-shop-one-nu.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                            <h2 class="name">Client Portfolio</h2>
-                        </div>
-                               <div class="col-info cols-7">  
-                        <div class="p-box g-border">
-                         <h3>Zee Rodriguez Portfolio</h3>
-                             <p> Zee Rodriguez Portfolio is a professional portfolio website
-                                showcasing services in business operations, social media
-                                management, web management, AI automation, and executive support.
-                                It features an interactive layout where visitors can explore
-                                professional roles, view project samples, and learn about the
-                                work process. The website helps potential clients discover
-                                suitable services and connect directly for business inquiries.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Zee.Rodrigue-Portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://zee-rodriguez-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://zee-rodriguez-portfolio.vercel.app/"
-                            title="zee-rodriguez-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                     </div>
-                    <div class="col-info cols-8">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://josielyn-rosalejos.vercel.app/"
-                            title="josielyn-rosalejos"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>Josielyn Rosalejos Portfolio</h3>
-                             <p>Josielyn Rosalejos Portfolio is a professional website
-                                showcasing her experience in customer service, lead generation,
-                                telesales, and virtual assistance. It highlights her career
-                                background, skills, software tools, certifications, and remote
-                                work setup. With a clean and organized layout, the website
-                                helps potential employers and clients explore her qualifications
-                                and connect with her for remote work opportunities.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/JOSIELYN-ROSALEJOS-PORTOFLIO"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://josielyn-rosalejos.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-info cols-9">  
-                        <div class="p-box g-border">
-                         <h3>Archie Sarmiento Portfolio</h3>
-                             <p>Archie Sarmiento Portfolio is a personal website showcasing
-                                his development skills, technical expertise, and projects.
-                                It highlights his frontend skills in HTML, CSS, and JavaScript,
-                                alongside backend technologies such as PHP, MySQL, and Node.js.
-                                The portfolio presents his technical abilities and growth as
-                                an aspiring developer.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Archie-Sarmiento"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://archie-sarmiento-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                             <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://archie-sarmiento-portfolio.vercel.app/"
-                            title="archie-sarmiento-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                    <div class="col-info cols-10">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://diether-ang-portfolio.vercel.app/"
-                            title="diether-ang-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>Diether Ang Portfolio</h3>
-                             <p> Diether Ang Portfolio is a professional website showcasing
-                                his experience in customer service, e-commerce support,
-                                healthcare assistance, and escalation management. It highlights
-                                his communication skills, CRM knowledge, and ability to handle
-                                customer concerns across multiple channels. The portfolio
-                                presents his qualifications and career achievements to help
-                                potential employers and clients explore his expertise.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Diether-Ang-portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://diether-ang-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-info cols-11">  
-                        <div class="p-box g-border">
-                         <h3>Ghein Portfolio</h3>
-                             <p> Ghein Portfolio is a personal website designed to showcase
-                                professional skills, creative work, and completed projects.
-                                It presents the portfolio owner's background, expertise,
-                                and accomplishments through an organized and visually
-                                engaging layout, helping potential clients and employers
-                                explore their capabilities and professional experience.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Christel-Ghein-Reginio-Portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://ghein-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://ghein-portfolio.vercel.app/"
-                            title="ghein-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                    <div class="col-info cols-12">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://kervel-sobrevilla-portfolio.vercel.app/"
-                            title="kervel-sobrevilla-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>Kervel Sobrevilla Portfolio</h3>
-                             <p>  Kervel Sobrevilla Portfolio is a professional website
-                                showcasing expertise in social media management, digital
-                                marketing, graphic design, and video editing. It highlights
-                                experience creating promotional content, designing branded
-                                graphics, managing social media platforms, and analyzing
-                                audience engagement. The portfolio features creative projects,
-                                professional experience, and certifications to help potential
-                                clients explore available services and expertise.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/portfolio-kervel"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://kervel-sobrevilla-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-info cols-13">  
-                        <div class="p-box g-border">
-                         <h3>Abigail Malinit Portfolio</h3>
-                             <p>   Abigail Malinit Portfolio is a professional website showcasing
-                                her experience in virtual assistance, administrative support,
-                                and business operations. It highlights her skills in calendar
-                                and email management, report preparation, project coordination,
-                                data analysis, and workflow automation. The portfolio also
-                                features her professional experience, certifications, and
-                                technical tools, helping potential clients explore her
-                                qualifications for remote administrative support.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/abigail-malinit-portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://abigail-malinit-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://abigail-malinit-portfolio.vercel.app/"
-                            title="abigail-malinit-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                    <div class="col-info cols-14">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://jairus-cruz-portfolio.vercel.app/"
-                            title="jairus-cruz-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>Jairus Cruz Portfolio</h3>
-                             <p>  Jairus Cruz Portfolio is a personal website showcasing
-                                technical skills, creative projects, and professional
-                                development. It presents Jairus's background, capabilities,
-                                and completed work through an organized and visually engaging
-                                interface, allowing potential clients and employers to explore
-                                his work and professional expertise.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Jairus-Cruz-Portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-
-                                <a href="https://jairus-cruz-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-info cols-15">  
-                        <div class="p-box g-border">
-                         <h3>Mark Jenzer Portfolio</h3>
-                             <p>   Mark Jenzer Portfolio is a professional website showcasing
-                                his expertise in virtual assistance, executive support,
-                                quality control, social media management, graphic design,
-                                and music education. It highlights his experience supporting
-                                international clients, managing administrative workflows,
-                                preparing reports, organizing digital records, and using AI
-                                tools to improve productivity. The portfolio also presents
-                                his teaching experience, musical background, and professional
-                                achievements.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Mark-Jenzer-Portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-                                <a href="https://mark-jenzer-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://mark-jenzer-portfolio.vercel.app/"
-                            title="mark-jenzer-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                    </div>
-                    <div class="col-info cols-16">  
-                    <div>
-                            <iframe class="for-hover" style="width: 600px; height: 100% ;"
-                            src="https://maria-kathryn-armenta-portfolio.vercel.app/"
-                            title="maria-kathryn-armenta-portfolio"
-                            class="project-iframe"
-                            loading="lazy"
-                            ></iframe>
-                    </div>        
-                        <div class="p-box g-border">
-                         <h3>Maria Kathryn Armenta Portfolio</h3>
-                             <p>  Maria Kathryn Armenta Portfolio is a professional website
-                                showcasing her expertise in digital marketing, virtual
-                                assistance, social media management, and administrative support.
-                                It highlights her experience in content planning, graphic design,
-                                email marketing, lead generation, customer service, and property
-                                management. The portfolio features marketing campaigns, creative
-                                materials, certifications, and professional experience, helping
-                                potential clients explore her services and expertise.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/raize21/Maria-Kathryn-portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn github-btn">
-                                    GitHub Repository
-                                </a>
-                                <a href="https://maria-kathryn-armenta-portfolio.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-btn demo-btn">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>        
-        </section>
-        <div class="h2-bottom">
-             <h2 class="name wrap">Certificate</h2>
-        </div>
-        <section id="page-4" class="wrap">
-            <div class="col-2">
-                <div class="img-box">
-                    <img class="img" style="width: 600px; height: 100%;" src="asset/image/cert1.jfif" alt="cert1">
-                </div>
-                <div class="img-box">                           
-                    <img class="img" style="width: 600px; height: 100%;" src="asset/image/cert2.jfif" alt="cert1">
-                </div>
-            </div>
-        </section>
-         <div class="h2-bottom">
-             <h2 class="name wrap">GET INTOUCH</h2>
-        </div>
-        <section id="page-5" class="wrap information-3">
-            <div class="col-2">
-                <p>Whether you're a student needing help with your thesis, 
-                or a business needing a custom system — I'm your operator. Let's build something that matters.</p>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:johnalbertsalazar241@gmail.com">Email</a>
-            </div>
-        </section>
-<footer class="wrap" style="text-align: center;">
-    <p>J.A.SALAZAR</p>
-    <p>© 2026 // ALL RIGHTS RESERVED // PHL</p>
+</script>
+<footer class="wrap center">
+  <p>J.A. Salazar</p>
+  <p>© 2026 All rights reserved · PHL</p>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>

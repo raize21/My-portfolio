@@ -715,16 +715,8 @@ h2 {
 }
 
 @media only screen and (max-width: 767px) {
-    .profile {
-        text-align: center;
-        flex-direction: column;
-        padding: 50px 50px 6% 50px !important;
-    }
-    .buttons {
-        justify-content: center;
-    }
     .profile-image img {
-        width: 350px !important;
+        width: 300px !important;
     }
     .information-2 .img img {
         height: 334px;

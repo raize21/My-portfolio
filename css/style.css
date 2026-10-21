@@ -709,8 +709,24 @@ h2 {
     #page-1 .col-2 {
         padding: 60px 50px;
     }
+    .profile {
+        padding: 70px 0 7% 0px;
+        gap: 0px;
+    }
     .profile-image img {
-        width: 277px !important;
+        width: 189px !important;
+    }
+        .btn {
+        font-size: 15px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .role {
+        font-size: 24px;
+    }
+    .name, .information-2 .name {
+        font-size: 30px;
     }
 }
 

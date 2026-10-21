@@ -720,9 +720,6 @@ h2 {
         flex-direction: column;
         padding: 50px 50px 6% 50px !important;
     }
-    #page-1 {
-        margin-right: 6px;
-    }
     .buttons {
         justify-content: center;
     }

@@ -719,7 +719,9 @@ h2 {
         text-align: center;
         flex-direction: column;
         padding: 50px 50px 6% 50px !important;
-        display: none;
+    }
+    #page-1 {
+        margin-right: 6px;
     }
     .buttons {
         justify-content: center;

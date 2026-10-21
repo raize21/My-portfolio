@@ -731,9 +731,6 @@ h2 {
 }
 
 @media only screen and (max-width: 767px) {
-    .profile-image img {
-        width: 300px !important;
-    }
     .information-2 .img img {
         height: 334px;
     }
@@ -748,9 +745,6 @@ h2 {
 }
 
 @media only screen and (max-width: 666px) {
-    .profile {
-        padding: 70px 0 7% 30px;
-    }
     .profile-image img {
         width: 220px !important;
     }

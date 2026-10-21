@@ -802,6 +802,9 @@ h2 {
     #page-1 .img {
         width: calc(50% - 1 * -125px);
     }
+    #page-3 .p-box {
+        padding: 40px;
+    }
 }
 
 @media only screen and (max-width: 374px) {
